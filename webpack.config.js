@@ -5,11 +5,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry:{
-    app: './src/index.js',
-    print: './src/print.js'
+    index: './src/index.js',
+    vendor: [
+      'lodash'
+    ]
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[chunkhash].js',
     // chunkFilename: '[name].bundle.js', // 决定非入口chunk的名称
     path: path.resolve(__dirname, 'dist')
   },
@@ -25,8 +27,14 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'out management'
+      title: 'caching'
     })
     // new BundleAnalyzerPlugin()
-  ]
+  ],
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //     minSize: 0
+  //   }
+  // }
 }
