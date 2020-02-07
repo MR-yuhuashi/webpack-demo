@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],[,function(n,o,c){"use strict";c.r(o),c.d(o,"add",(function(){return s}));const s=(n,o)=>n+o}]]);

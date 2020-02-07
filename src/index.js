@@ -1,11 +1,11 @@
-import _ from 'lodash';
-function component () {
-  var element = document.createElement('div');
+function getComponent () {
+  return import(/* webpackChunkName: "lodash" */ 'lodash').then(_ => {
+    var element = document.createElement('div');
 
-  // Lodash,now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  return element;
+    element.innerHTML = _.join(['hello new webpack'], ' ');
+  });
 }
 
-document.body.appendChild(component());
+getComponent().then(component => {
+  document.body.appendChild(component());
+});
