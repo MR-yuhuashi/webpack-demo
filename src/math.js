@@ -3,5 +3,6 @@ export function square(x){
 }
 
 export function cube(x){
+  console.log('updating math.js ');
   return x * x * x;
 }
