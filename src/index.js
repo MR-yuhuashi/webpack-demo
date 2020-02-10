@@ -1,8 +1,7 @@
 import {cube} from './math';
 
-conoose.error('has error');
 if (process.env.NODE_ENV !== 'production') {
-  console.log(`process.env.NODE_ENV !== 'production'`);
+  console.log(`process.env.NODE_ENV !== 'production', hahaha`);
 } else {
   console.log(`process.env.NODE_ENV === 'production'`);
 } 

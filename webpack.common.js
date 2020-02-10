@@ -10,7 +10,8 @@ module.exports = {
   output: {
     filename: '[name].js',
     // chunkFilename: '[name].bundle.js', // 决定非入口chunk的名称
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
