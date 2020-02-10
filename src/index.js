@@ -1,4 +1,10 @@
 import {cube} from './math';
+
+if (process.env.NODE_ENV !== 'production') {
+  console.log(`process.env.NODE_ENV !== 'production'`);
+} else {
+  console.log(`process.env.NODE_ENV === 'production'`);
+} 
 function component () {
   const element = document.createElement('pre');
 
