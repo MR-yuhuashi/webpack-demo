@@ -4,14 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry:{
     index: './src/index.js',
-    vendor: [
-      'lodash'
-    ]
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
     // chunkFilename: '[name].bundle.js', // 决定非入口chunk的名称
     path: path.resolve(__dirname, 'dist')
   },
